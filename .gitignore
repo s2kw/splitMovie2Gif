@@ -1,0 +1,20 @@
+# rider
+.idea
+
+# mac
+*.DS_Store
+.DS_Store
+
+# venv
+.venv
+
+# tmp dl data
+temperature_data.csv
+
+# 出力したファイル
+out
+
+# インプット
+originFile
+
+
