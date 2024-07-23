@@ -2,8 +2,15 @@
 
 
 # 使い方
-Split video into GIF or MP4 segments
+venvで動作させると良いです。
 
+コマンドラインで下記を入力して動作させます。インプットとアウトプットの指定は必須です。
+```bash
+python main.py
+``` 
+
+
+```
 'input_file', help='Path to the input video file'
 'output_dir', help='Path to the output directory'
 '--type', choices=['gif', 'mp4'], default='gif', help='Output file type (default: gif)'
@@ -11,6 +18,7 @@ Split video into GIF or MP4 segments
 '--fps', type=int, help='Frames per second (default: same as input)'
 '--scale', type=int, help='Output width in pixels (default: same as input)'
 '--no-audio', action='store_true', help='Remove audio from MP4 output (ignored for GIF)'
+```
 
 gifは超時間がかかるがmp4は早い。
 
