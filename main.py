@@ -60,6 +60,9 @@ def split_video(input_file, output_dir, duration=15, fps=None, scale=None, outpu
     
     print(f"All {num_segments} {output_type.upper()} files have been created successfully.")
 
+def get_file_extension(filename):
+    return os.path.splitext(filename)[1].lower()
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Split video into GIF or MP4 segments')
     parser.add_argument('input_file', help='Path to the input video file')
@@ -71,6 +74,11 @@ if __name__ == '__main__':
     parser.add_argument('--no-audio', action='store_true', help='Remove audio from MP4 output (ignored for GIF)')
     
     args = parser.parse_args()
+    
+    # 入力ファイルの拡張子をチェック
+    input_extension = get_file_extension(args.input_file)
+    if input_extension not in ['.mp4', '.mov']:
+        print(f"Warning: Input file format '{input_extension}' may not be supported. Proceeding anyway...")
     
     include_audio = not args.no_audio if args.type == 'mp4' else False
     split_video(args.input_file, args.output_dir, args.duration, args.fps, args.scale, args.type, include_audio)

@@ -17,4 +17,11 @@ out
 # インプット
 originFile
 
+# 素材データ
+*.png
+*.mp4
+*.wav
+*.wave
+*.mov
+
 
