@@ -4,6 +4,15 @@
 # 使い方
 venvで動作させると良いです。
 
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+```
+
+
 コマンドラインで下記を入力して動作させます。インプットとアウトプットの指定は必須です。
 ```bash
 python main.py
