@@ -1,4 +1,7 @@
 
+# 概要
+動画を指定時間単位で裁断しSNSにアップしやすい短い動画群にします。
+mp4出力、gif出力に対応。
 
 
 # 使い方
@@ -9,7 +12,6 @@ python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-
 ```
 
 
@@ -46,10 +48,16 @@ python main.py input_video.mp4 output_directory --type mp4 --duration 1 --fps 20
 - 15秒単位で切ります。
 - 10fpsに短縮します。
 - 640サイズにスケールします。省略するとオリジナルと同じ画面サイズになります。
+- 60fpxにすると0バイトのゴミが出力されます。
+
 
 ```
-python main.py originFile/20240705.mp4 out --type mp4 --duration 15 --fps 10 --scale 640
+python main.py originFile/v06003.mov out --type mp4 --duration 15 --fps 20 --scale 640
+python main.py originFile/DBS_Play.mov output_directory --type gif --duration 3 --fps 10 --scale 640
+python main.py originFile/DBS_NosBGM.mov output_directory_pv --type mp4 --duration 0.42 
 ```
+
+
 
 ## sample 2
 - input_video.mp4 を加工します。

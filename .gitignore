@@ -12,7 +12,7 @@
 temperature_data.csv
 
 # 出力したファイル
-out
+out*
 
 # インプット
 originFile
@@ -23,5 +23,4 @@ originFile
 *.wav
 *.wave
 *.mov
-
 
