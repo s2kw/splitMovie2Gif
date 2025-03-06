@@ -39,10 +39,14 @@ gifは超時間がかかるがmp4は早い。
 
 ```
 python main.py input_video.mp4 output_directory --type gif --duration 15 --fps 10 --scale 640
-python main.py input_video.mp4 output_directory --type mp4 --duration 1 --fps 20 --scale 640
+python main.py DBS-2025-03-04.mp4 out --type mp4 --duration 0.7 --fps 60 --scale 1920
+python main.py originFile/DBS-2025-03-04.mp4 out --type mp4 --duration 0.7 --fps 60
 ```
 
+DBS-2025-03-04.mp4
+
 ## sample 1
+
 - originFile/20240705.mp4を加工します。
 - mp4形式で出力します。
 - 15秒単位で切ります。
